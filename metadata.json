@@ -1,0 +1,6 @@
+{
+  "name": "Gerenciador de Férias",
+  "description": "Aplicação offline-first para gerenciar períodos de férias pessoais, detecção de conflitos, alertas de proximidade e exportação de dados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
