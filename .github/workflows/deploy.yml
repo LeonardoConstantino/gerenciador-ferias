@@ -37,15 +37,15 @@ jobs:
       - name: Instalar dependências
         run: |
           if [ -f package-lock.json ]; then
-            npm ci
+            npm ci || npm install --legacy-peer-deps
           elif [ -f yarn.lock ]; then
             yarn install --frozen-lockfile
           elif [ -f pnpm-lock.yaml ]; then
             pnpm install --frozen-lockfile
           elif [ -f bun.lock ] || [ -f bun.lockb ]; then
-            npm install
+            npm install || npm install --legacy-peer-deps
           else
-            npm install
+            npm install || npm install --legacy-peer-deps
           fi
 
       - name: Compilar aplicação
